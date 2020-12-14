@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "198156626520",
+    "project_id": "weatherforecast-4662f",
+    "storage_bucket": "weatherforecast-4662f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198156626520:android:07e2640671be296261382d",
+        "android_client_info": {
+          "package_name": "com.sedaaggez.weatherforecast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198156626520-vbracr570tng3820uqe61g4llsvs2ein.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8QobJyubUDeh7DslCNK7m4xDj4nUuCSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198156626520-vbracr570tng3820uqe61g4llsvs2ein.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/weather_forecast"
+    app:startDestination="@id/citiesFragment">
+
+    <fragment
+        android:id="@+id/citiesFragment"
+        android:name="com.sedaaggez.weatherforecast.view.CitiesFragment"
+        android:label="CitiesFragment" >
+        <action
+            android:id="@+id/action_citiesFragment_to_dailyWeatherFragment"
+            app:destination="@id/dailyWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyWeatherFragment"
+        android:name="com.sedaaggez.weatherforecast.view.DailyWeatherFragment"
+        android:label="DailyWeatherFragment" >
+        <action
+            android:id="@+id/action_dailyWeatherFragment_to_citiesFragment"
+            app:destination="@id/citiesFragment" />
+        <argument
+            android:name="cityWoeId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
