@@ -24,4 +24,8 @@ It is an android application that shows the weather forecast of cities close to 
 <img src="https://user-images.githubusercontent.com/10815175/102056528-91f98080-3dfd-11eb-91c5-71d65aaf61e7.JPG" width="800">
 <img src="https://user-images.githubusercontent.com/10815175/102056560-9e7dd900-3dfd-11eb-994f-6029e6afd615.JPG" width="800">
 
+# License
+
+This project is licensed under the  GNU General Public License v3.0 License - see the [LICENSE](LICENSE) file for details.
+
 
