@@ -6,21 +6,28 @@
     <fragment
         android:id="@+id/citiesFragment"
         android:name="com.sedaaggez.weatherforecast.view.CitiesFragment"
-        android:label="CitiesFragment" >
+        android:label="Cities">
         <action
             android:id="@+id/action_citiesFragment_to_dailyWeatherFragment"
             app:destination="@id/dailyWeatherFragment" />
+        <action
+            android:id="@+id/action_citiesFragment_to_warningFragment"
+            app:destination="@id/warningFragment" />
     </fragment>
     <fragment
         android:id="@+id/dailyWeatherFragment"
         android:name="com.sedaaggez.weatherforecast.view.DailyWeatherFragment"
-        android:label="DailyWeatherFragment" >
+        android:label="Daily Weather">
         <action
             android:id="@+id/action_dailyWeatherFragment_to_citiesFragment"
             app:destination="@id/citiesFragment" />
         <argument
             android:name="cityWoeId"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/warningFragment"
+        android:name="com.sedaaggez.weatherforecast.view.WarningFragment"
+        android:label="Warning" />
 </navigation>

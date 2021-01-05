@@ -5,4 +5,6 @@
     <string name="windSpeedLabel">Wind Speed</string>
     <string name="humidityLabel">Humidity</string>
     <string name="nextDaysLabel">Next days</string>
+    <string name="warningTitle">Internet or Location off</string>
+    <string name="warningSubtitle">Please check your settings and try again</string>
 </resources>

@@ -1,16 +1,13 @@
 package com.sedaaggez.weatherforecast.view
 
 import android.Manifest
-import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,12 +15,12 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sedaaggez.weatherforecast.R
 import com.sedaaggez.weatherforecast.adapter.CityAdapter
 import com.sedaaggez.weatherforecast.viewmodel.CitiesViewModel
 import kotlinx.android.synthetic.main.fragment_cities.*
-
 
 class CitiesFragment : Fragment() {
 
@@ -56,15 +53,8 @@ class CitiesFragment : Fragment() {
                 LocationManager.GPS_PROVIDER
             )
         ) {
-            val builder = AlertDialog.Builder(requireContext())
-            builder.setTitle("Internet or Location off")
-            builder.setMessage("Please turn on internet and location to continue")
-            builder.setPositiveButton("Okay") { dialog, which ->
-                startActivity(Intent(Settings.ACTION_SETTINGS))
-                requireActivity().finish()
-
-            }
-            builder.show()
+            Navigation.findNavController(requireView())
+                .navigate(CitiesFragmentDirections.actionCitiesFragmentToWarningFragment())
         } else {
             locationListener = object : LocationListener {
                 override fun onLocationChanged(location: Location?) {
